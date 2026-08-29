@@ -3,8 +3,8 @@
   "description": "Core elemental data for the Chemical World Model. Geometric/atomic properties are sourced from RDKit periodic-table data; phase is a standard-condition classification. This file intentionally avoids fabricated thermodynamic constants.",
   "units": {
     "atomic_weight_u": "u",
-    "covalent_radius_angstrom": "Å",
-    "van_der_waals_radius_angstrom": "Å"
+    "covalent_radius_angstrom": "\u00c5",
+    "van_der_waals_radius_angstrom": "\u00c5"
   },
   "elements": [
     {
@@ -14,7 +14,9 @@
       "atomic_weight_u": 1.008,
       "covalent_radius_angstrom": 0.31,
       "van_der_waals_radius_angstrom": 1.2,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 13.99,
+      "boiling_point_k": 20.271
     },
     {
       "atomic_number": 2,
@@ -23,7 +25,9 @@
       "atomic_weight_u": 4.003,
       "covalent_radius_angstrom": 0.28,
       "van_der_waals_radius_angstrom": 1.4,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 0.95,
+      "boiling_point_k": 4.222
     },
     {
       "atomic_number": 3,
@@ -32,7 +36,9 @@
       "atomic_weight_u": 6.941,
       "covalent_radius_angstrom": 1.28,
       "van_der_waals_radius_angstrom": 2.2,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 453.65,
+      "boiling_point_k": 1603
     },
     {
       "atomic_number": 4,
@@ -41,7 +47,9 @@
       "atomic_weight_u": 9.012,
       "covalent_radius_angstrom": 0.96,
       "van_der_waals_radius_angstrom": 1.9,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1560,
+      "boiling_point_k": 2742
     },
     {
       "atomic_number": 5,
@@ -50,7 +58,9 @@
       "atomic_weight_u": 10.812,
       "covalent_radius_angstrom": 0.84,
       "van_der_waals_radius_angstrom": 1.8,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2349,
+      "boiling_point_k": 4200
     },
     {
       "atomic_number": 6,
@@ -59,7 +69,9 @@
       "atomic_weight_u": 12.011,
       "covalent_radius_angstrom": 0.76,
       "van_der_waals_radius_angstrom": 1.7,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 7,
@@ -68,7 +80,9 @@
       "atomic_weight_u": 14.007,
       "covalent_radius_angstrom": 0.71,
       "van_der_waals_radius_angstrom": 1.6,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 63.15,
+      "boiling_point_k": 77.355
     },
     {
       "atomic_number": 8,
@@ -77,7 +91,9 @@
       "atomic_weight_u": 15.999,
       "covalent_radius_angstrom": 0.66,
       "van_der_waals_radius_angstrom": 1.55,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 54.36,
+      "boiling_point_k": 90.188
     },
     {
       "atomic_number": 9,
@@ -86,7 +102,9 @@
       "atomic_weight_u": 18.998,
       "covalent_radius_angstrom": 0.57,
       "van_der_waals_radius_angstrom": 1.5,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 53.48,
+      "boiling_point_k": 85.03
     },
     {
       "atomic_number": 10,
@@ -95,7 +113,9 @@
       "atomic_weight_u": 20.18,
       "covalent_radius_angstrom": 0.58,
       "van_der_waals_radius_angstrom": 1.54,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 24.56,
+      "boiling_point_k": 27.104
     },
     {
       "atomic_number": 11,
@@ -104,7 +124,9 @@
       "atomic_weight_u": 22.99,
       "covalent_radius_angstrom": 1.66,
       "van_der_waals_radius_angstrom": 2.4,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 370.944,
+      "boiling_point_k": 1156.09
     },
     {
       "atomic_number": 12,
@@ -113,7 +135,9 @@
       "atomic_weight_u": 24.305,
       "covalent_radius_angstrom": 1.41,
       "van_der_waals_radius_angstrom": 2.2,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 923,
+      "boiling_point_k": 1363
     },
     {
       "atomic_number": 13,
@@ -122,7 +146,9 @@
       "atomic_weight_u": 26.982,
       "covalent_radius_angstrom": 1.21,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 933.47,
+      "boiling_point_k": 2743
     },
     {
       "atomic_number": 14,
@@ -131,7 +157,9 @@
       "atomic_weight_u": 28.086,
       "covalent_radius_angstrom": 1.11,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1687,
+      "boiling_point_k": 3538
     },
     {
       "atomic_number": 15,
@@ -140,7 +168,9 @@
       "atomic_weight_u": 30.974,
       "covalent_radius_angstrom": 1.07,
       "van_der_waals_radius_angstrom": 1.95,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 16,
@@ -149,7 +179,9 @@
       "atomic_weight_u": 32.067,
       "covalent_radius_angstrom": 1.05,
       "van_der_waals_radius_angstrom": 1.8,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 388.36,
+      "boiling_point_k": 717.8
     },
     {
       "atomic_number": 17,
@@ -158,7 +190,9 @@
       "atomic_weight_u": 35.453,
       "covalent_radius_angstrom": 1.02,
       "van_der_waals_radius_angstrom": 1.8,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 171.6,
+      "boiling_point_k": 239.11
     },
     {
       "atomic_number": 18,
@@ -167,7 +201,9 @@
       "atomic_weight_u": 39.948,
       "covalent_radius_angstrom": 1.06,
       "van_der_waals_radius_angstrom": 1.88,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 83.81,
+      "boiling_point_k": 87.302
     },
     {
       "atomic_number": 19,
@@ -176,7 +212,9 @@
       "atomic_weight_u": 39.098,
       "covalent_radius_angstrom": 2.03,
       "van_der_waals_radius_angstrom": 2.8,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 336.7,
+      "boiling_point_k": 1032
     },
     {
       "atomic_number": 20,
@@ -185,7 +223,9 @@
       "atomic_weight_u": 40.078,
       "covalent_radius_angstrom": 1.76,
       "van_der_waals_radius_angstrom": 2.4,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1115,
+      "boiling_point_k": 1757
     },
     {
       "atomic_number": 21,
@@ -194,7 +234,9 @@
       "atomic_weight_u": 44.956,
       "covalent_radius_angstrom": 1.7,
       "van_der_waals_radius_angstrom": 2.3,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1814,
+      "boiling_point_k": 3109
     },
     {
       "atomic_number": 22,
@@ -203,7 +245,9 @@
       "atomic_weight_u": 47.867,
       "covalent_radius_angstrom": 1.6,
       "van_der_waals_radius_angstrom": 2.15,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1941,
+      "boiling_point_k": 3560
     },
     {
       "atomic_number": 23,
@@ -212,7 +256,9 @@
       "atomic_weight_u": 50.944,
       "covalent_radius_angstrom": 1.52,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2183,
+      "boiling_point_k": 3680
     },
     {
       "atomic_number": 24,
@@ -221,7 +267,9 @@
       "atomic_weight_u": 51.996,
       "covalent_radius_angstrom": 1.39,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2180,
+      "boiling_point_k": 2944
     },
     {
       "atomic_number": 25,
@@ -230,7 +278,9 @@
       "atomic_weight_u": 54.938,
       "covalent_radius_angstrom": 1.39,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1519,
+      "boiling_point_k": 2334
     },
     {
       "atomic_number": 26,
@@ -239,7 +289,9 @@
       "atomic_weight_u": 55.845,
       "covalent_radius_angstrom": 1.32,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1811,
+      "boiling_point_k": 3134
     },
     {
       "atomic_number": 27,
@@ -248,7 +300,9 @@
       "atomic_weight_u": 58.933,
       "covalent_radius_angstrom": 1.26,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1768,
+      "boiling_point_k": 3200
     },
     {
       "atomic_number": 28,
@@ -257,7 +311,9 @@
       "atomic_weight_u": 58.693,
       "covalent_radius_angstrom": 1.24,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1728,
+      "boiling_point_k": 3003
     },
     {
       "atomic_number": 29,
@@ -266,7 +322,9 @@
       "atomic_weight_u": 63.546,
       "covalent_radius_angstrom": 1.32,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1357.77,
+      "boiling_point_k": 2835
     },
     {
       "atomic_number": 30,
@@ -275,7 +333,9 @@
       "atomic_weight_u": 65.39,
       "covalent_radius_angstrom": 1.22,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 692.68,
+      "boiling_point_k": 1180
     },
     {
       "atomic_number": 31,
@@ -284,7 +344,9 @@
       "atomic_weight_u": 69.723,
       "covalent_radius_angstrom": 1.22,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 302.9146,
+      "boiling_point_k": 2673
     },
     {
       "atomic_number": 32,
@@ -293,7 +355,9 @@
       "atomic_weight_u": 72.61,
       "covalent_radius_angstrom": 1.2,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1211.4,
+      "boiling_point_k": 3106
     },
     {
       "atomic_number": 33,
@@ -302,7 +366,9 @@
       "atomic_weight_u": 74.922,
       "covalent_radius_angstrom": 1.19,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 34,
@@ -311,7 +377,9 @@
       "atomic_weight_u": 78.96,
       "covalent_radius_angstrom": 1.2,
       "van_der_waals_radius_angstrom": 1.9,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 494,
+      "boiling_point_k": 958
     },
     {
       "atomic_number": 35,
@@ -320,7 +388,9 @@
       "atomic_weight_u": 79.904,
       "covalent_radius_angstrom": 1.2,
       "van_der_waals_radius_angstrom": 1.9,
-      "phase_at_298K_1atm": "liquid"
+      "phase_at_298K_1atm": "liquid",
+      "melting_point_k": 265.8,
+      "boiling_point_k": 332
     },
     {
       "atomic_number": 36,
@@ -329,7 +399,9 @@
       "atomic_weight_u": 83.8,
       "covalent_radius_angstrom": 1.16,
       "van_der_waals_radius_angstrom": 2.02,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 115.78,
+      "boiling_point_k": 119.93
     },
     {
       "atomic_number": 37,
@@ -338,7 +410,9 @@
       "atomic_weight_u": 85.468,
       "covalent_radius_angstrom": 2.2,
       "van_der_waals_radius_angstrom": 2.9,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 312.45,
+      "boiling_point_k": 961
     },
     {
       "atomic_number": 38,
@@ -347,7 +421,9 @@
       "atomic_weight_u": 87.62,
       "covalent_radius_angstrom": 1.95,
       "van_der_waals_radius_angstrom": 2.55,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1050,
+      "boiling_point_k": 1650
     },
     {
       "atomic_number": 39,
@@ -356,7 +432,9 @@
       "atomic_weight_u": 88.906,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.4,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1799,
+      "boiling_point_k": 3203
     },
     {
       "atomic_number": 40,
@@ -365,7 +443,9 @@
       "atomic_weight_u": 91.224,
       "covalent_radius_angstrom": 1.75,
       "van_der_waals_radius_angstrom": 2.3,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2128,
+      "boiling_point_k": 4650
     },
     {
       "atomic_number": 41,
@@ -374,7 +454,9 @@
       "atomic_weight_u": 92.906,
       "covalent_radius_angstrom": 1.64,
       "van_der_waals_radius_angstrom": 2.15,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2750,
+      "boiling_point_k": 5017
     },
     {
       "atomic_number": 42,
@@ -383,7 +465,9 @@
       "atomic_weight_u": 95.94,
       "covalent_radius_angstrom": 1.54,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2896,
+      "boiling_point_k": 4912
     },
     {
       "atomic_number": 43,
@@ -392,7 +476,9 @@
       "atomic_weight_u": 98.0,
       "covalent_radius_angstrom": 1.47,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2430,
+      "boiling_point_k": 4538
     },
     {
       "atomic_number": 44,
@@ -401,7 +487,9 @@
       "atomic_weight_u": 101.07,
       "covalent_radius_angstrom": 1.46,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2607,
+      "boiling_point_k": 4423
     },
     {
       "atomic_number": 45,
@@ -410,7 +498,9 @@
       "atomic_weight_u": 102.906,
       "covalent_radius_angstrom": 1.42,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2237,
+      "boiling_point_k": 3968
     },
     {
       "atomic_number": 46,
@@ -419,7 +509,9 @@
       "atomic_weight_u": 106.42,
       "covalent_radius_angstrom": 1.39,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1828.05,
+      "boiling_point_k": 3236
     },
     {
       "atomic_number": 47,
@@ -428,7 +520,9 @@
       "atomic_weight_u": 107.868,
       "covalent_radius_angstrom": 1.45,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1234.93,
+      "boiling_point_k": 2435
     },
     {
       "atomic_number": 48,
@@ -437,7 +531,9 @@
       "atomic_weight_u": 112.412,
       "covalent_radius_angstrom": 1.44,
       "van_der_waals_radius_angstrom": 2.2,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 594.22,
+      "boiling_point_k": 1040
     },
     {
       "atomic_number": 49,
@@ -446,7 +542,9 @@
       "atomic_weight_u": 114.818,
       "covalent_radius_angstrom": 1.42,
       "van_der_waals_radius_angstrom": 2.2,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 429.7485,
+      "boiling_point_k": 2345
     },
     {
       "atomic_number": 50,
@@ -455,7 +553,9 @@
       "atomic_weight_u": 118.711,
       "covalent_radius_angstrom": 1.39,
       "van_der_waals_radius_angstrom": 2.25,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 505.08,
+      "boiling_point_k": 2875
     },
     {
       "atomic_number": 51,
@@ -464,7 +564,9 @@
       "atomic_weight_u": 121.76,
       "covalent_radius_angstrom": 1.39,
       "van_der_waals_radius_angstrom": 2.2,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 903.78,
+      "boiling_point_k": 1908
     },
     {
       "atomic_number": 52,
@@ -473,7 +575,9 @@
       "atomic_weight_u": 127.6,
       "covalent_radius_angstrom": 1.38,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 722.66,
+      "boiling_point_k": 1261
     },
     {
       "atomic_number": 53,
@@ -482,7 +586,9 @@
       "atomic_weight_u": 126.904,
       "covalent_radius_angstrom": 1.39,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 386.85,
+      "boiling_point_k": 457.4
     },
     {
       "atomic_number": 54,
@@ -491,7 +597,9 @@
       "atomic_weight_u": 131.29,
       "covalent_radius_angstrom": 1.4,
       "van_der_waals_radius_angstrom": 2.16,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 161.4,
+      "boiling_point_k": 165.051
     },
     {
       "atomic_number": 55,
@@ -500,7 +608,9 @@
       "atomic_weight_u": 132.905,
       "covalent_radius_angstrom": 2.44,
       "van_der_waals_radius_angstrom": 3.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 301.7,
+      "boiling_point_k": 944
     },
     {
       "atomic_number": 56,
@@ -509,7 +619,9 @@
       "atomic_weight_u": 137.328,
       "covalent_radius_angstrom": 2.15,
       "van_der_waals_radius_angstrom": 2.7,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1000,
+      "boiling_point_k": 2118
     },
     {
       "atomic_number": 57,
@@ -518,7 +630,9 @@
       "atomic_weight_u": 138.906,
       "covalent_radius_angstrom": 2.07,
       "van_der_waals_radius_angstrom": 2.5,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1193,
+      "boiling_point_k": 3737
     },
     {
       "atomic_number": 58,
@@ -527,7 +641,9 @@
       "atomic_weight_u": 140.116,
       "covalent_radius_angstrom": 2.04,
       "van_der_waals_radius_angstrom": 2.48,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1068,
+      "boiling_point_k": 3716
     },
     {
       "atomic_number": 59,
@@ -536,7 +652,9 @@
       "atomic_weight_u": 140.908,
       "covalent_radius_angstrom": 2.03,
       "van_der_waals_radius_angstrom": 2.47,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1208,
+      "boiling_point_k": 3403
     },
     {
       "atomic_number": 60,
@@ -545,7 +663,9 @@
       "atomic_weight_u": 144.24,
       "covalent_radius_angstrom": 2.01,
       "van_der_waals_radius_angstrom": 2.45,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1297,
+      "boiling_point_k": 3347
     },
     {
       "atomic_number": 61,
@@ -554,7 +674,9 @@
       "atomic_weight_u": 145.0,
       "covalent_radius_angstrom": 1.99,
       "van_der_waals_radius_angstrom": 2.43,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1315,
+      "boiling_point_k": 3273
     },
     {
       "atomic_number": 62,
@@ -563,7 +685,9 @@
       "atomic_weight_u": 150.36,
       "covalent_radius_angstrom": 1.98,
       "van_der_waals_radius_angstrom": 2.42,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1345,
+      "boiling_point_k": 2173
     },
     {
       "atomic_number": 63,
@@ -572,7 +696,9 @@
       "atomic_weight_u": 151.964,
       "covalent_radius_angstrom": 1.98,
       "van_der_waals_radius_angstrom": 2.4,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1099,
+      "boiling_point_k": 1802
     },
     {
       "atomic_number": 64,
@@ -581,7 +707,9 @@
       "atomic_weight_u": 157.25,
       "covalent_radius_angstrom": 1.96,
       "van_der_waals_radius_angstrom": 2.38,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1585,
+      "boiling_point_k": 3273
     },
     {
       "atomic_number": 65,
@@ -590,7 +718,9 @@
       "atomic_weight_u": 158.925,
       "covalent_radius_angstrom": 1.94,
       "van_der_waals_radius_angstrom": 2.37,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1629,
+      "boiling_point_k": 3396
     },
     {
       "atomic_number": 66,
@@ -599,7 +729,9 @@
       "atomic_weight_u": 162.5,
       "covalent_radius_angstrom": 1.92,
       "van_der_waals_radius_angstrom": 2.35,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1680,
+      "boiling_point_k": 2840
     },
     {
       "atomic_number": 67,
@@ -608,7 +740,9 @@
       "atomic_weight_u": 164.93,
       "covalent_radius_angstrom": 1.92,
       "van_der_waals_radius_angstrom": 2.33,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1734,
+      "boiling_point_k": 2873
     },
     {
       "atomic_number": 68,
@@ -617,7 +751,9 @@
       "atomic_weight_u": 167.26,
       "covalent_radius_angstrom": 1.89,
       "van_der_waals_radius_angstrom": 2.32,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1802,
+      "boiling_point_k": 3141
     },
     {
       "atomic_number": 69,
@@ -626,7 +762,9 @@
       "atomic_weight_u": 168.934,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.3,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1818,
+      "boiling_point_k": 2223
     },
     {
       "atomic_number": 70,
@@ -635,7 +773,9 @@
       "atomic_weight_u": 173.04,
       "covalent_radius_angstrom": 1.87,
       "van_der_waals_radius_angstrom": 2.28,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1097,
+      "boiling_point_k": 1469
     },
     {
       "atomic_number": 71,
@@ -644,7 +784,9 @@
       "atomic_weight_u": 174.967,
       "covalent_radius_angstrom": 1.87,
       "van_der_waals_radius_angstrom": 2.27,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1925,
+      "boiling_point_k": 3675
     },
     {
       "atomic_number": 72,
@@ -653,7 +795,9 @@
       "atomic_weight_u": 178.49,
       "covalent_radius_angstrom": 1.75,
       "van_der_waals_radius_angstrom": 2.25,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2506,
+      "boiling_point_k": 4876
     },
     {
       "atomic_number": 73,
@@ -662,7 +806,9 @@
       "atomic_weight_u": 180.948,
       "covalent_radius_angstrom": 1.7,
       "van_der_waals_radius_angstrom": 2.2,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 3290,
+      "boiling_point_k": 5731
     },
     {
       "atomic_number": 74,
@@ -671,7 +817,9 @@
       "atomic_weight_u": 183.84,
       "covalent_radius_angstrom": 1.62,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 3695,
+      "boiling_point_k": 6203
     },
     {
       "atomic_number": 75,
@@ -680,7 +828,9 @@
       "atomic_weight_u": 186.207,
       "covalent_radius_angstrom": 1.51,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 3459,
+      "boiling_point_k": 5869
     },
     {
       "atomic_number": 76,
@@ -689,7 +839,9 @@
       "atomic_weight_u": 190.23,
       "covalent_radius_angstrom": 1.44,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 3306,
+      "boiling_point_k": 5285
     },
     {
       "atomic_number": 77,
@@ -698,7 +850,9 @@
       "atomic_weight_u": 192.217,
       "covalent_radius_angstrom": 1.41,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2719,
+      "boiling_point_k": 4403
     },
     {
       "atomic_number": 78,
@@ -707,7 +861,9 @@
       "atomic_weight_u": 195.078,
       "covalent_radius_angstrom": 1.36,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2041.4,
+      "boiling_point_k": 4098
     },
     {
       "atomic_number": 79,
@@ -716,7 +872,9 @@
       "atomic_weight_u": 196.967,
       "covalent_radius_angstrom": 1.36,
       "van_der_waals_radius_angstrom": 2.1,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1337.33,
+      "boiling_point_k": 3243
     },
     {
       "atomic_number": 80,
@@ -725,7 +883,9 @@
       "atomic_weight_u": 200.59,
       "covalent_radius_angstrom": 1.32,
       "van_der_waals_radius_angstrom": 2.05,
-      "phase_at_298K_1atm": "liquid"
+      "phase_at_298K_1atm": "liquid",
+      "melting_point_k": 234.321,
+      "boiling_point_k": 629.88
     },
     {
       "atomic_number": 81,
@@ -734,7 +894,9 @@
       "atomic_weight_u": 204.383,
       "covalent_radius_angstrom": 1.45,
       "van_der_waals_radius_angstrom": 2.2,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 577,
+      "boiling_point_k": 1746
     },
     {
       "atomic_number": 82,
@@ -743,7 +905,9 @@
       "atomic_weight_u": 207.2,
       "covalent_radius_angstrom": 1.46,
       "van_der_waals_radius_angstrom": 2.3,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 600.61,
+      "boiling_point_k": 2022
     },
     {
       "atomic_number": 83,
@@ -752,7 +916,9 @@
       "atomic_weight_u": 208.98,
       "covalent_radius_angstrom": 1.48,
       "van_der_waals_radius_angstrom": 2.3,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 544.7,
+      "boiling_point_k": 1837
     },
     {
       "atomic_number": 84,
@@ -761,7 +927,9 @@
       "atomic_weight_u": 209.0,
       "covalent_radius_angstrom": 1.4,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 527,
+      "boiling_point_k": 1235
     },
     {
       "atomic_number": 85,
@@ -770,7 +938,9 @@
       "atomic_weight_u": 210.0,
       "covalent_radius_angstrom": 1.5,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 575,
+      "boiling_point_k": 610
     },
     {
       "atomic_number": 86,
@@ -779,7 +949,9 @@
       "atomic_weight_u": 222.0,
       "covalent_radius_angstrom": 1.5,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "gas"
+      "phase_at_298K_1atm": "gas",
+      "melting_point_k": 202,
+      "boiling_point_k": 211.5
     },
     {
       "atomic_number": 87,
@@ -788,7 +960,9 @@
       "atomic_weight_u": 223.0,
       "covalent_radius_angstrom": 2.6,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 300,
+      "boiling_point_k": 950
     },
     {
       "atomic_number": 88,
@@ -797,7 +971,9 @@
       "atomic_weight_u": 226.0,
       "covalent_radius_angstrom": 2.2,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1233,
+      "boiling_point_k": 2010
     },
     {
       "atomic_number": 89,
@@ -806,7 +982,9 @@
       "atomic_weight_u": 227.0,
       "covalent_radius_angstrom": 2.15,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1500,
+      "boiling_point_k": 3500
     },
     {
       "atomic_number": 90,
@@ -815,7 +993,9 @@
       "atomic_weight_u": 232.038,
       "covalent_radius_angstrom": 2.06,
       "van_der_waals_radius_angstrom": 2.4,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2023,
+      "boiling_point_k": 5061
     },
     {
       "atomic_number": 91,
@@ -824,7 +1004,9 @@
       "atomic_weight_u": 231.036,
       "covalent_radius_angstrom": 2.0,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1841,
+      "boiling_point_k": 4300
     },
     {
       "atomic_number": 92,
@@ -833,7 +1015,9 @@
       "atomic_weight_u": 238.029,
       "covalent_radius_angstrom": 1.96,
       "van_der_waals_radius_angstrom": 2.3,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1405.3,
+      "boiling_point_k": 4404
     },
     {
       "atomic_number": 93,
@@ -842,7 +1026,9 @@
       "atomic_weight_u": 237.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 912,
+      "boiling_point_k": 4447
     },
     {
       "atomic_number": 94,
@@ -851,7 +1037,9 @@
       "atomic_weight_u": 244.0,
       "covalent_radius_angstrom": 1.87,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 912.5,
+      "boiling_point_k": 3505
     },
     {
       "atomic_number": 95,
@@ -860,7 +1048,9 @@
       "atomic_weight_u": 243.0,
       "covalent_radius_angstrom": 1.8,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1449,
+      "boiling_point_k": 2880
     },
     {
       "atomic_number": 96,
@@ -869,7 +1059,9 @@
       "atomic_weight_u": 247.0,
       "covalent_radius_angstrom": 1.69,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1613,
+      "boiling_point_k": 3383
     },
     {
       "atomic_number": 97,
@@ -878,7 +1070,9 @@
       "atomic_weight_u": 247.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1259,
+      "boiling_point_k": 2900
     },
     {
       "atomic_number": 98,
@@ -887,7 +1081,9 @@
       "atomic_weight_u": 251.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1173,
+      "boiling_point_k": 1743
     },
     {
       "atomic_number": 99,
@@ -896,7 +1092,9 @@
       "atomic_weight_u": 252.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1133,
+      "boiling_point_k": 1269
     },
     {
       "atomic_number": 100,
@@ -905,7 +1103,9 @@
       "atomic_weight_u": 257.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1800,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 101,
@@ -914,7 +1114,9 @@
       "atomic_weight_u": 258.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1100,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 102,
@@ -923,7 +1125,9 @@
       "atomic_weight_u": 259.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1100,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 103,
@@ -932,7 +1136,9 @@
       "atomic_weight_u": 262.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 1900,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 104,
@@ -941,7 +1147,9 @@
       "atomic_weight_u": 267.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 2400,
+      "boiling_point_k": 5800
     },
     {
       "atomic_number": 105,
@@ -950,7 +1158,9 @@
       "atomic_weight_u": 268.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 106,
@@ -959,7 +1169,9 @@
       "atomic_weight_u": 269.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 107,
@@ -968,7 +1180,9 @@
       "atomic_weight_u": 270.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 108,
@@ -977,7 +1191,9 @@
       "atomic_weight_u": 269.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 126,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 109,
@@ -986,7 +1202,9 @@
       "atomic_weight_u": 278.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 110,
@@ -995,7 +1213,9 @@
       "atomic_weight_u": 281.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 111,
@@ -1004,7 +1224,9 @@
       "atomic_weight_u": 281.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": null
     },
     {
       "atomic_number": 112,
@@ -1013,7 +1235,9 @@
       "atomic_weight_u": 285.0,
       "covalent_radius_angstrom": 1.9,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": null,
+      "boiling_point_k": 3570
     },
     {
       "atomic_number": 113,
@@ -1022,7 +1246,9 @@
       "atomic_weight_u": 284.0,
       "covalent_radius_angstrom": 1.36,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 700,
+      "boiling_point_k": 1430
     },
     {
       "atomic_number": 114,
@@ -1031,7 +1257,9 @@
       "atomic_weight_u": 289.0,
       "covalent_radius_angstrom": 1.43,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 340,
+      "boiling_point_k": 420
     },
     {
       "atomic_number": 115,
@@ -1040,7 +1268,9 @@
       "atomic_weight_u": 288.0,
       "covalent_radius_angstrom": 1.62,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 670,
+      "boiling_point_k": 1400
     },
     {
       "atomic_number": 116,
@@ -1049,7 +1279,9 @@
       "atomic_weight_u": 293.0,
       "covalent_radius_angstrom": 1.75,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 709,
+      "boiling_point_k": 1085
     },
     {
       "atomic_number": 117,
@@ -1058,7 +1290,9 @@
       "atomic_weight_u": 292.0,
       "covalent_radius_angstrom": 1.65,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "solid"
+      "phase_at_298K_1atm": "solid",
+      "melting_point_k": 723,
+      "boiling_point_k": 883
     },
     {
       "atomic_number": 118,
@@ -1067,7 +1301,11 @@
       "atomic_weight_u": 294.0,
       "covalent_radius_angstrom": 1.57,
       "van_der_waals_radius_angstrom": 2.0,
-      "phase_at_298K_1atm": "unknown"
+      "phase_at_298K_1atm": "unknown",
+      "melting_point_k": null,
+      "boiling_point_k": 350
     }
-  ]
+  ],
+  "source_note": "",
+  "melting_boiling_point_source": "Bowserinator/Periodic-Table-JSON (community-maintained, Wikipedia-sourced), Kelvin, at ~1 atm reference pressure. null = not experimentally established (mainly synthetic superheavy elements)."
 }

@@ -12,13 +12,14 @@ explicitly supplied.
 from __future__ import annotations
 
 from dataclasses import dataclass, asdict
-from math import isfinite
+from math import isfinite, log10
 from typing import Any, Mapping
 
 from chemistry import (
     load_elements,
     molar_mass,
     parse_formula,
+    parse_charge,
     ideal_gas_pressure,
     ideal_gas_volume,
     ideal_gas_moles,
@@ -27,6 +28,18 @@ from chemistry import (
     equilibrium_constant_from_delta_g,
     balance_reaction,
     stoichiometric_extent_limiting_reagent,
+    reaction_quotient,
+    mixture_phase_summary,
+    charge_balance,
+    ionic_strength,
+    ph_from_h_concentration,
+    poh_from_oh_concentration,
+    kw_at_temperature,
+    oxidation_states,
+    evaluate_solubility,
+    SOLUBILITY_DATA,
+    cell_potential,
+    STANDARD_REDUCTION_POTENTIALS,
 )
 
 ELEMENTS = load_elements()
@@ -195,6 +208,58 @@ def elemental_composition(
     return totals
 
 
+def _ionic_summary(state: ChemicalState) -> dict[str, Any] | None:
+    """Only present when the composition actually contains charged species
+    (parsed via each formula's charge notation, e.g. 'Na+', 'SO4^2-')."""
+
+    charged_species = {
+        formula: moles
+        for formula, moles in state.composition.items()
+        if parse_charge(formula) != 0
+    }
+
+    if not charged_species:
+        return None
+
+    summary: dict[str, Any] = {
+        "charge_balance": charge_balance(state.composition),
+    }
+
+    if state.volume_l is not None and state.volume_l > 0:
+
+        concentrations = {
+            formula: moles / state.volume_l
+            for formula, moles in charged_species.items()
+        }
+
+        summary["ion_concentrations_mol_l"] = concentrations
+        summary["ionic_strength_mol_l"] = ionic_strength(concentrations)
+
+        h_conc = concentrations.get("H+")
+        oh_conc = concentrations.get("OH-")
+
+        if h_conc is not None and h_conc > 0:
+            summary["pH"] = ph_from_h_concentration(h_conc)
+
+        if oh_conc is not None and oh_conc > 0:
+            summary["pOH"] = poh_from_oh_concentration(oh_conc)
+
+        if "pH" in summary or "pOH" in summary:
+            p_kw = -log10(kw_at_temperature(state.temperature_k))
+            if "pH" in summary and "pOH" not in summary:
+                summary["pOH"] = p_kw - summary["pH"]
+            elif "pOH" in summary and "pH" not in summary:
+                summary["pH"] = p_kw - summary["pOH"]
+            summary["kw_at_temperature"] = kw_at_temperature(state.temperature_k)
+
+    else:
+        summary["note"] = (
+            "Supply volume_l to compute ionic strength and pH from these ion amounts."
+        )
+
+    return summary
+
+
 def calculate_state_properties(
     state: ChemicalState
 ) -> dict[str, Any]:
@@ -245,7 +310,150 @@ def calculate_state_properties(
             volume_l=state.volume_l,
         )
 
+    result["phase_summary"] = mixture_phase_summary(
+        state.composition,
+        state.temperature_k,
+        state.pressure_atm,
+        elements=ELEMENTS,
+    )
+
+    result["ionic_summary"] = _ionic_summary(state)
+
     return result
+
+
+def _oxidation_and_redox(balanced: dict[str, Any]) -> dict[str, Any]:
+    reactant_ox = {f: oxidation_states(f, elements=ELEMENTS) for f in balanced["reactants"]}
+    product_ox = {f: oxidation_states(f, elements=ELEMENTS) for f in balanced["products"]}
+
+    reactant_states_by_element: dict[str, set] = {}
+    for info in reactant_ox.values():
+        for el, val in info["oxidation_states"].items():
+            reactant_states_by_element.setdefault(el, set()).add(val)
+
+    product_states_by_element: dict[str, set] = {}
+    for info in product_ox.values():
+        for el, val in info["oxidation_states"].items():
+            product_states_by_element.setdefault(el, set()).add(val)
+
+    changed_elements = []
+    indeterminate_elements = []
+
+    for el in set(reactant_states_by_element) & set(product_states_by_element):
+        r_states = reactant_states_by_element[el]
+        p_states = product_states_by_element[el]
+        if "indeterminate" in r_states or "indeterminate" in p_states:
+            indeterminate_elements.append(el)
+        elif r_states != p_states:
+            changed_elements.append({
+                "element": el,
+                "reactant_states": sorted(r_states),
+                "product_states": sorted(p_states),
+            })
+
+    if changed_elements:
+        is_redox: Any = True
+    elif indeterminate_elements:
+        is_redox = "indeterminate"
+    else:
+        is_redox = False
+
+    result = {
+        "reactant_oxidation_states": reactant_ox,
+        "product_oxidation_states": product_ox,
+        "is_redox": is_redox,
+        "changed_elements": changed_elements,
+    }
+    if indeterminate_elements:
+        result["indeterminate_elements"] = indeterminate_elements
+    return result
+
+
+def _detect_electrochemistry(balanced: dict[str, Any]) -> dict[str, Any] | None:
+    """Only succeeds when the reaction's species match a curated half-
+    reaction couple's exact formula spelling on both the oxidized and
+    reduced side — otherwise returns None (no fabricated E-cell)."""
+    reduction_couple = None
+    oxidation_couple = None
+
+    for label, data in STANDARD_REDUCTION_POTENTIALS.items():
+        ox, red = data["oxidized_form"], data["reduced_form"]
+        if ox in balanced["reactants"] and red in balanced["products"]:
+            reduction_couple = label
+        if red in balanced["reactants"] and ox in balanced["products"]:
+            oxidation_couple = label
+
+    if reduction_couple and oxidation_couple and reduction_couple != oxidation_couple:
+        return cell_potential(reduction_couple, oxidation_couple)
+    return None
+
+
+def _equilibrium_status(
+    state: ChemicalState,
+    balanced: dict[str, Any],
+    k: float,
+) -> dict[str, Any]:
+    all_species = list(balanced["reactants"]) + list(balanced["products"])
+
+    if state.volume_l is not None and state.volume_l > 0:
+        basis = "concentration_mol_l"
+        activities = {f: state.composition.get(f, 0.0) / state.volume_l for f in all_species}
+    else:
+        basis = "moles (no volume_l supplied — this is not a true concentration)"
+        activities = {f: state.composition.get(f, 0.0) for f in all_species}
+
+    if any(activities[f] <= 0 for f in all_species):
+        return {
+            "reaction_quotient": None,
+            "basis": basis,
+            "reason": (
+                "One or more species has zero or unspecified amount in the "
+                "current composition — Q is not defined."
+            ),
+        }
+
+    q = reaction_quotient(activities, balanced["products"]) / reaction_quotient(
+        activities, balanced["reactants"]
+    )
+
+    ratio = (q / k) if k != 0 else float("inf")
+    if 0.99 <= ratio <= 1.01:
+        direction = "at_equilibrium"
+    elif q < k:
+        direction = "forward (toward products)"
+    else:
+        direction = "reverse (toward reactants)"
+
+    return {
+        "reaction_quotient": q,
+        "equilibrium_constant": k,
+        "basis": basis,
+        "direction": direction,
+    }
+
+
+def _precipitation_check(
+    state: ChemicalState,
+    balanced: dict[str, Any],
+) -> dict[str, Any] | None:
+    candidates = [f for f in balanced["products"] if f in SOLUBILITY_DATA]
+    if not candidates or not state.volume_l:
+        return None
+
+    results = {}
+    for compound in candidates:
+        dissociation = SOLUBILITY_DATA[compound]["dissociation"]
+        concentrations = {}
+        for ion in dissociation:
+            moles = state.composition.get(ion)
+            if moles is None:
+                concentrations = None
+                break
+            concentrations[ion] = moles / state.volume_l
+        if concentrations is not None:
+            results[compound] = evaluate_solubility(compound, concentrations)
+
+    return results or None
 
 
 def calculate_reaction(
@@ -355,6 +563,26 @@ def calculate_reaction(
                 state.temperature_k,
             )
         )
+
+    redox_info = _oxidation_and_redox(balanced)
+    result.update(redox_info)
+
+    result["electrochemistry"] = _detect_electrochemistry(balanced)
+
+    if "equilibrium_constant" in result:
+        result["equilibrium"] = _equilibrium_status(
+            state, balanced, result["equilibrium_constant"]
+        )
+    else:
+        result["equilibrium"] = {
+            "reaction_quotient": None,
+            "reason": (
+                "No thermodynamic data (delta_H+delta_S or standard delta_G) "
+                "was supplied, so no K is available to compare against."
+            ),
+        }
+
+    result["precipitation"] = _precipitation_check(state, balanced)
 
     return result
 
