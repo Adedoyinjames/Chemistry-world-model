@@ -1,0 +1,1073 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Core elemental data for the Chemical World Model. Geometric/atomic properties are sourced from RDKit periodic-table data; phase is a standard-condition classification. This file intentionally avoids fabricated thermodynamic constants.",
+  "units": {
+    "atomic_weight_u": "u",
+    "covalent_radius_angstrom": "Å",
+    "van_der_waals_radius_angstrom": "Å"
+  },
+  "elements": [
+    {
+      "atomic_number": 1,
+      "symbol": "H",
+      "name": "Hydrogen",
+      "atomic_weight_u": 1.008,
+      "covalent_radius_angstrom": 0.31,
+      "van_der_waals_radius_angstrom": 1.2,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 2,
+      "symbol": "He",
+      "name": "Helium",
+      "atomic_weight_u": 4.003,
+      "covalent_radius_angstrom": 0.28,
+      "van_der_waals_radius_angstrom": 1.4,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 3,
+      "symbol": "Li",
+      "name": "Lithium",
+      "atomic_weight_u": 6.941,
+      "covalent_radius_angstrom": 1.28,
+      "van_der_waals_radius_angstrom": 2.2,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 4,
+      "symbol": "Be",
+      "name": "Beryllium",
+      "atomic_weight_u": 9.012,
+      "covalent_radius_angstrom": 0.96,
+      "van_der_waals_radius_angstrom": 1.9,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 5,
+      "symbol": "B",
+      "name": "Boron",
+      "atomic_weight_u": 10.812,
+      "covalent_radius_angstrom": 0.84,
+      "van_der_waals_radius_angstrom": 1.8,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 6,
+      "symbol": "C",
+      "name": "Carbon",
+      "atomic_weight_u": 12.011,
+      "covalent_radius_angstrom": 0.76,
+      "van_der_waals_radius_angstrom": 1.7,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 7,
+      "symbol": "N",
+      "name": "Nitrogen",
+      "atomic_weight_u": 14.007,
+      "covalent_radius_angstrom": 0.71,
+      "van_der_waals_radius_angstrom": 1.6,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 8,
+      "symbol": "O",
+      "name": "Oxygen",
+      "atomic_weight_u": 15.999,
+      "covalent_radius_angstrom": 0.66,
+      "van_der_waals_radius_angstrom": 1.55,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 9,
+      "symbol": "F",
+      "name": "Fluorine",
+      "atomic_weight_u": 18.998,
+      "covalent_radius_angstrom": 0.57,
+      "van_der_waals_radius_angstrom": 1.5,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 10,
+      "symbol": "Ne",
+      "name": "Neon",
+      "atomic_weight_u": 20.18,
+      "covalent_radius_angstrom": 0.58,
+      "van_der_waals_radius_angstrom": 1.54,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 11,
+      "symbol": "Na",
+      "name": "Sodium",
+      "atomic_weight_u": 22.99,
+      "covalent_radius_angstrom": 1.66,
+      "van_der_waals_radius_angstrom": 2.4,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 12,
+      "symbol": "Mg",
+      "name": "Magnesium",
+      "atomic_weight_u": 24.305,
+      "covalent_radius_angstrom": 1.41,
+      "van_der_waals_radius_angstrom": 2.2,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 13,
+      "symbol": "Al",
+      "name": "Aluminium",
+      "atomic_weight_u": 26.982,
+      "covalent_radius_angstrom": 1.21,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 14,
+      "symbol": "Si",
+      "name": "Silicon",
+      "atomic_weight_u": 28.086,
+      "covalent_radius_angstrom": 1.11,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 15,
+      "symbol": "P",
+      "name": "Phosphorus",
+      "atomic_weight_u": 30.974,
+      "covalent_radius_angstrom": 1.07,
+      "van_der_waals_radius_angstrom": 1.95,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 16,
+      "symbol": "S",
+      "name": "Sulfur",
+      "atomic_weight_u": 32.067,
+      "covalent_radius_angstrom": 1.05,
+      "van_der_waals_radius_angstrom": 1.8,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 17,
+      "symbol": "Cl",
+      "name": "Chlorine",
+      "atomic_weight_u": 35.453,
+      "covalent_radius_angstrom": 1.02,
+      "van_der_waals_radius_angstrom": 1.8,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 18,
+      "symbol": "Ar",
+      "name": "Argon",
+      "atomic_weight_u": 39.948,
+      "covalent_radius_angstrom": 1.06,
+      "van_der_waals_radius_angstrom": 1.88,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 19,
+      "symbol": "K",
+      "name": "Potassium",
+      "atomic_weight_u": 39.098,
+      "covalent_radius_angstrom": 2.03,
+      "van_der_waals_radius_angstrom": 2.8,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 20,
+      "symbol": "Ca",
+      "name": "Calcium",
+      "atomic_weight_u": 40.078,
+      "covalent_radius_angstrom": 1.76,
+      "van_der_waals_radius_angstrom": 2.4,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 21,
+      "symbol": "Sc",
+      "name": "Scandium",
+      "atomic_weight_u": 44.956,
+      "covalent_radius_angstrom": 1.7,
+      "van_der_waals_radius_angstrom": 2.3,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 22,
+      "symbol": "Ti",
+      "name": "Titanium",
+      "atomic_weight_u": 47.867,
+      "covalent_radius_angstrom": 1.6,
+      "van_der_waals_radius_angstrom": 2.15,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 23,
+      "symbol": "V",
+      "name": "Vanadium",
+      "atomic_weight_u": 50.944,
+      "covalent_radius_angstrom": 1.52,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 24,
+      "symbol": "Cr",
+      "name": "Chromium",
+      "atomic_weight_u": 51.996,
+      "covalent_radius_angstrom": 1.39,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 25,
+      "symbol": "Mn",
+      "name": "Manganese",
+      "atomic_weight_u": 54.938,
+      "covalent_radius_angstrom": 1.39,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 26,
+      "symbol": "Fe",
+      "name": "Iron",
+      "atomic_weight_u": 55.845,
+      "covalent_radius_angstrom": 1.32,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 27,
+      "symbol": "Co",
+      "name": "Cobalt",
+      "atomic_weight_u": 58.933,
+      "covalent_radius_angstrom": 1.26,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 28,
+      "symbol": "Ni",
+      "name": "Nickel",
+      "atomic_weight_u": 58.693,
+      "covalent_radius_angstrom": 1.24,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 29,
+      "symbol": "Cu",
+      "name": "Copper",
+      "atomic_weight_u": 63.546,
+      "covalent_radius_angstrom": 1.32,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 30,
+      "symbol": "Zn",
+      "name": "Zinc",
+      "atomic_weight_u": 65.39,
+      "covalent_radius_angstrom": 1.22,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 31,
+      "symbol": "Ga",
+      "name": "Gallium",
+      "atomic_weight_u": 69.723,
+      "covalent_radius_angstrom": 1.22,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 32,
+      "symbol": "Ge",
+      "name": "Germanium",
+      "atomic_weight_u": 72.61,
+      "covalent_radius_angstrom": 1.2,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 33,
+      "symbol": "As",
+      "name": "Arsenic",
+      "atomic_weight_u": 74.922,
+      "covalent_radius_angstrom": 1.19,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 34,
+      "symbol": "Se",
+      "name": "Selenium",
+      "atomic_weight_u": 78.96,
+      "covalent_radius_angstrom": 1.2,
+      "van_der_waals_radius_angstrom": 1.9,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 35,
+      "symbol": "Br",
+      "name": "Bromine",
+      "atomic_weight_u": 79.904,
+      "covalent_radius_angstrom": 1.2,
+      "van_der_waals_radius_angstrom": 1.9,
+      "phase_at_298K_1atm": "liquid"
+    },
+    {
+      "atomic_number": 36,
+      "symbol": "Kr",
+      "name": "Krypton",
+      "atomic_weight_u": 83.8,
+      "covalent_radius_angstrom": 1.16,
+      "van_der_waals_radius_angstrom": 2.02,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 37,
+      "symbol": "Rb",
+      "name": "Rubidium",
+      "atomic_weight_u": 85.468,
+      "covalent_radius_angstrom": 2.2,
+      "van_der_waals_radius_angstrom": 2.9,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 38,
+      "symbol": "Sr",
+      "name": "Strontium",
+      "atomic_weight_u": 87.62,
+      "covalent_radius_angstrom": 1.95,
+      "van_der_waals_radius_angstrom": 2.55,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 39,
+      "symbol": "Y",
+      "name": "Yttrium",
+      "atomic_weight_u": 88.906,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.4,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 40,
+      "symbol": "Zr",
+      "name": "Zirconium",
+      "atomic_weight_u": 91.224,
+      "covalent_radius_angstrom": 1.75,
+      "van_der_waals_radius_angstrom": 2.3,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 41,
+      "symbol": "Nb",
+      "name": "Niobium",
+      "atomic_weight_u": 92.906,
+      "covalent_radius_angstrom": 1.64,
+      "van_der_waals_radius_angstrom": 2.15,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 42,
+      "symbol": "Mo",
+      "name": "Molybdenum",
+      "atomic_weight_u": 95.94,
+      "covalent_radius_angstrom": 1.54,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 43,
+      "symbol": "Tc",
+      "name": "Technetium",
+      "atomic_weight_u": 98.0,
+      "covalent_radius_angstrom": 1.47,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 44,
+      "symbol": "Ru",
+      "name": "Ruthenium",
+      "atomic_weight_u": 101.07,
+      "covalent_radius_angstrom": 1.46,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 45,
+      "symbol": "Rh",
+      "name": "Rhodium",
+      "atomic_weight_u": 102.906,
+      "covalent_radius_angstrom": 1.42,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 46,
+      "symbol": "Pd",
+      "name": "Palladium",
+      "atomic_weight_u": 106.42,
+      "covalent_radius_angstrom": 1.39,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 47,
+      "symbol": "Ag",
+      "name": "Silver",
+      "atomic_weight_u": 107.868,
+      "covalent_radius_angstrom": 1.45,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 48,
+      "symbol": "Cd",
+      "name": "Cadmium",
+      "atomic_weight_u": 112.412,
+      "covalent_radius_angstrom": 1.44,
+      "van_der_waals_radius_angstrom": 2.2,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 49,
+      "symbol": "In",
+      "name": "Indium",
+      "atomic_weight_u": 114.818,
+      "covalent_radius_angstrom": 1.42,
+      "van_der_waals_radius_angstrom": 2.2,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 50,
+      "symbol": "Sn",
+      "name": "Tin",
+      "atomic_weight_u": 118.711,
+      "covalent_radius_angstrom": 1.39,
+      "van_der_waals_radius_angstrom": 2.25,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 51,
+      "symbol": "Sb",
+      "name": "Antimony",
+      "atomic_weight_u": 121.76,
+      "covalent_radius_angstrom": 1.39,
+      "van_der_waals_radius_angstrom": 2.2,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 52,
+      "symbol": "Te",
+      "name": "Tellurium",
+      "atomic_weight_u": 127.6,
+      "covalent_radius_angstrom": 1.38,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 53,
+      "symbol": "I",
+      "name": "Iodine",
+      "atomic_weight_u": 126.904,
+      "covalent_radius_angstrom": 1.39,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 54,
+      "symbol": "Xe",
+      "name": "Xenon",
+      "atomic_weight_u": 131.29,
+      "covalent_radius_angstrom": 1.4,
+      "van_der_waals_radius_angstrom": 2.16,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 55,
+      "symbol": "Cs",
+      "name": "Caesium",
+      "atomic_weight_u": 132.905,
+      "covalent_radius_angstrom": 2.44,
+      "van_der_waals_radius_angstrom": 3.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 56,
+      "symbol": "Ba",
+      "name": "Barium",
+      "atomic_weight_u": 137.328,
+      "covalent_radius_angstrom": 2.15,
+      "van_der_waals_radius_angstrom": 2.7,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 57,
+      "symbol": "La",
+      "name": "Lanthanum",
+      "atomic_weight_u": 138.906,
+      "covalent_radius_angstrom": 2.07,
+      "van_der_waals_radius_angstrom": 2.5,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 58,
+      "symbol": "Ce",
+      "name": "Cerium",
+      "atomic_weight_u": 140.116,
+      "covalent_radius_angstrom": 2.04,
+      "van_der_waals_radius_angstrom": 2.48,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 59,
+      "symbol": "Pr",
+      "name": "Praseodymium",
+      "atomic_weight_u": 140.908,
+      "covalent_radius_angstrom": 2.03,
+      "van_der_waals_radius_angstrom": 2.47,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 60,
+      "symbol": "Nd",
+      "name": "Neodymium",
+      "atomic_weight_u": 144.24,
+      "covalent_radius_angstrom": 2.01,
+      "van_der_waals_radius_angstrom": 2.45,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 61,
+      "symbol": "Pm",
+      "name": "Promethium",
+      "atomic_weight_u": 145.0,
+      "covalent_radius_angstrom": 1.99,
+      "van_der_waals_radius_angstrom": 2.43,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 62,
+      "symbol": "Sm",
+      "name": "Samarium",
+      "atomic_weight_u": 150.36,
+      "covalent_radius_angstrom": 1.98,
+      "van_der_waals_radius_angstrom": 2.42,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 63,
+      "symbol": "Eu",
+      "name": "Europium",
+      "atomic_weight_u": 151.964,
+      "covalent_radius_angstrom": 1.98,
+      "van_der_waals_radius_angstrom": 2.4,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 64,
+      "symbol": "Gd",
+      "name": "Gadolinium",
+      "atomic_weight_u": 157.25,
+      "covalent_radius_angstrom": 1.96,
+      "van_der_waals_radius_angstrom": 2.38,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 65,
+      "symbol": "Tb",
+      "name": "Terbium",
+      "atomic_weight_u": 158.925,
+      "covalent_radius_angstrom": 1.94,
+      "van_der_waals_radius_angstrom": 2.37,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 66,
+      "symbol": "Dy",
+      "name": "Dysprosium",
+      "atomic_weight_u": 162.5,
+      "covalent_radius_angstrom": 1.92,
+      "van_der_waals_radius_angstrom": 2.35,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 67,
+      "symbol": "Ho",
+      "name": "Holmium",
+      "atomic_weight_u": 164.93,
+      "covalent_radius_angstrom": 1.92,
+      "van_der_waals_radius_angstrom": 2.33,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 68,
+      "symbol": "Er",
+      "name": "Erbium",
+      "atomic_weight_u": 167.26,
+      "covalent_radius_angstrom": 1.89,
+      "van_der_waals_radius_angstrom": 2.32,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 69,
+      "symbol": "Tm",
+      "name": "Thulium",
+      "atomic_weight_u": 168.934,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.3,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 70,
+      "symbol": "Yb",
+      "name": "Ytterbium",
+      "atomic_weight_u": 173.04,
+      "covalent_radius_angstrom": 1.87,
+      "van_der_waals_radius_angstrom": 2.28,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 71,
+      "symbol": "Lu",
+      "name": "Lutetium",
+      "atomic_weight_u": 174.967,
+      "covalent_radius_angstrom": 1.87,
+      "van_der_waals_radius_angstrom": 2.27,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 72,
+      "symbol": "Hf",
+      "name": "Hafnium",
+      "atomic_weight_u": 178.49,
+      "covalent_radius_angstrom": 1.75,
+      "van_der_waals_radius_angstrom": 2.25,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 73,
+      "symbol": "Ta",
+      "name": "Tantalum",
+      "atomic_weight_u": 180.948,
+      "covalent_radius_angstrom": 1.7,
+      "van_der_waals_radius_angstrom": 2.2,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 74,
+      "symbol": "W",
+      "name": "Tungsten",
+      "atomic_weight_u": 183.84,
+      "covalent_radius_angstrom": 1.62,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 75,
+      "symbol": "Re",
+      "name": "Rhenium",
+      "atomic_weight_u": 186.207,
+      "covalent_radius_angstrom": 1.51,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 76,
+      "symbol": "Os",
+      "name": "Osmium",
+      "atomic_weight_u": 190.23,
+      "covalent_radius_angstrom": 1.44,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 77,
+      "symbol": "Ir",
+      "name": "Iridium",
+      "atomic_weight_u": 192.217,
+      "covalent_radius_angstrom": 1.41,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 78,
+      "symbol": "Pt",
+      "name": "Platinum",
+      "atomic_weight_u": 195.078,
+      "covalent_radius_angstrom": 1.36,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 79,
+      "symbol": "Au",
+      "name": "Gold",
+      "atomic_weight_u": 196.967,
+      "covalent_radius_angstrom": 1.36,
+      "van_der_waals_radius_angstrom": 2.1,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 80,
+      "symbol": "Hg",
+      "name": "Mercury",
+      "atomic_weight_u": 200.59,
+      "covalent_radius_angstrom": 1.32,
+      "van_der_waals_radius_angstrom": 2.05,
+      "phase_at_298K_1atm": "liquid"
+    },
+    {
+      "atomic_number": 81,
+      "symbol": "Tl",
+      "name": "Thallium",
+      "atomic_weight_u": 204.383,
+      "covalent_radius_angstrom": 1.45,
+      "van_der_waals_radius_angstrom": 2.2,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 82,
+      "symbol": "Pb",
+      "name": "Lead",
+      "atomic_weight_u": 207.2,
+      "covalent_radius_angstrom": 1.46,
+      "van_der_waals_radius_angstrom": 2.3,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 83,
+      "symbol": "Bi",
+      "name": "Bismuth",
+      "atomic_weight_u": 208.98,
+      "covalent_radius_angstrom": 1.48,
+      "van_der_waals_radius_angstrom": 2.3,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 84,
+      "symbol": "Po",
+      "name": "Polonium",
+      "atomic_weight_u": 209.0,
+      "covalent_radius_angstrom": 1.4,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 85,
+      "symbol": "At",
+      "name": "Astatine",
+      "atomic_weight_u": 210.0,
+      "covalent_radius_angstrom": 1.5,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 86,
+      "symbol": "Rn",
+      "name": "Radon",
+      "atomic_weight_u": 222.0,
+      "covalent_radius_angstrom": 1.5,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "gas"
+    },
+    {
+      "atomic_number": 87,
+      "symbol": "Fr",
+      "name": "Francium",
+      "atomic_weight_u": 223.0,
+      "covalent_radius_angstrom": 2.6,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 88,
+      "symbol": "Ra",
+      "name": "Radium",
+      "atomic_weight_u": 226.0,
+      "covalent_radius_angstrom": 2.2,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 89,
+      "symbol": "Ac",
+      "name": "Actinium",
+      "atomic_weight_u": 227.0,
+      "covalent_radius_angstrom": 2.15,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 90,
+      "symbol": "Th",
+      "name": "Thorium",
+      "atomic_weight_u": 232.038,
+      "covalent_radius_angstrom": 2.06,
+      "van_der_waals_radius_angstrom": 2.4,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 91,
+      "symbol": "Pa",
+      "name": "Protactinium",
+      "atomic_weight_u": 231.036,
+      "covalent_radius_angstrom": 2.0,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 92,
+      "symbol": "U",
+      "name": "Uranium",
+      "atomic_weight_u": 238.029,
+      "covalent_radius_angstrom": 1.96,
+      "van_der_waals_radius_angstrom": 2.3,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 93,
+      "symbol": "Np",
+      "name": "Neptunium",
+      "atomic_weight_u": 237.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 94,
+      "symbol": "Pu",
+      "name": "Plutonium",
+      "atomic_weight_u": 244.0,
+      "covalent_radius_angstrom": 1.87,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 95,
+      "symbol": "Am",
+      "name": "Americium",
+      "atomic_weight_u": 243.0,
+      "covalent_radius_angstrom": 1.8,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 96,
+      "symbol": "Cm",
+      "name": "Curium",
+      "atomic_weight_u": 247.0,
+      "covalent_radius_angstrom": 1.69,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 97,
+      "symbol": "Bk",
+      "name": "Berkelium",
+      "atomic_weight_u": 247.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 98,
+      "symbol": "Cf",
+      "name": "Californium",
+      "atomic_weight_u": 251.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 99,
+      "symbol": "Es",
+      "name": "Einsteinium",
+      "atomic_weight_u": 252.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 100,
+      "symbol": "Fm",
+      "name": "Fermium",
+      "atomic_weight_u": 257.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 101,
+      "symbol": "Md",
+      "name": "Mendelevium",
+      "atomic_weight_u": 258.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 102,
+      "symbol": "No",
+      "name": "Nobelium",
+      "atomic_weight_u": 259.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 103,
+      "symbol": "Lr",
+      "name": "Lawrencium",
+      "atomic_weight_u": 262.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 104,
+      "symbol": "Rf",
+      "name": "Rutherfordium",
+      "atomic_weight_u": 267.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 105,
+      "symbol": "Db",
+      "name": "Dubnium",
+      "atomic_weight_u": 268.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 106,
+      "symbol": "Sg",
+      "name": "Seaborgium",
+      "atomic_weight_u": 269.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 107,
+      "symbol": "Bh",
+      "name": "Bohrium",
+      "atomic_weight_u": 270.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 108,
+      "symbol": "Hs",
+      "name": "Hassium",
+      "atomic_weight_u": 269.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 109,
+      "symbol": "Mt",
+      "name": "Meitnerium",
+      "atomic_weight_u": 278.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 110,
+      "symbol": "Ds",
+      "name": "Darmstadtium",
+      "atomic_weight_u": 281.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 111,
+      "symbol": "Rg",
+      "name": "Roentgenium",
+      "atomic_weight_u": 281.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 112,
+      "symbol": "Cn",
+      "name": "Copernicium",
+      "atomic_weight_u": 285.0,
+      "covalent_radius_angstrom": 1.9,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 113,
+      "symbol": "Nh",
+      "name": "Nihonium",
+      "atomic_weight_u": 284.0,
+      "covalent_radius_angstrom": 1.36,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 114,
+      "symbol": "Fl",
+      "name": "Flerovium",
+      "atomic_weight_u": 289.0,
+      "covalent_radius_angstrom": 1.43,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 115,
+      "symbol": "Mc",
+      "name": "Moscovium",
+      "atomic_weight_u": 288.0,
+      "covalent_radius_angstrom": 1.62,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 116,
+      "symbol": "Lv",
+      "name": "Livermorium",
+      "atomic_weight_u": 293.0,
+      "covalent_radius_angstrom": 1.75,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 117,
+      "symbol": "Ts",
+      "name": "Tennessine",
+      "atomic_weight_u": 292.0,
+      "covalent_radius_angstrom": 1.65,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "solid"
+    },
+    {
+      "atomic_number": 118,
+      "symbol": "Og",
+      "name": "Oganesson",
+      "atomic_weight_u": 294.0,
+      "covalent_radius_angstrom": 1.57,
+      "van_der_waals_radius_angstrom": 2.0,
+      "phase_at_298K_1atm": "unknown"
+    }
+  ]
+}
