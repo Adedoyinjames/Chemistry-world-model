@@ -13,14 +13,19 @@ API documentation:
 
 from __future__ import annotations
 
+import os
 from typing import Any
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field
 
 from simulation import (
+    ELEMENTS,
     SimulationError,
+    molar_mass,
+    parse_formula,
     simulate_payload,
 )
 
@@ -32,6 +37,25 @@ app = FastAPI(
         "their physical and chemical state."
     ),
     version="1.0.0",
+)
+
+# CORS: comma-separated list of allowed origins, e.g.
+#   ALLOWED_ORIGINS="https://your-frontend.vercel.app,http://localhost:5173"
+# Defaults to "*" (any origin) so it works out of the box; lock this down
+# to your real frontend domain(s) once you deploy it.
+_allowed_origins = os.environ.get("ALLOWED_ORIGINS", "*")
+_origins = (
+    ["*"]
+    if _allowed_origins.strip() == "*"
+    else [o.strip() for o in _allowed_origins.split(",") if o.strip()]
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=_origins,
+    allow_credentials=_origins != ["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
@@ -91,6 +115,57 @@ class SimulationRequest(BaseModel):
     reaction: dict[str, Any] | None = None
 
 
+class FormulaValidationRequest(BaseModel):
+
+    model_config = ConfigDict(
+        extra="forbid"
+    )
+
+    formula: str = Field(
+        ...,
+        examples=["Ca(OH)2"],
+    )
+
+
+@app.post("/formulas/validate")
+def validate_formula(
+    request: FormulaValidationRequest,
+):
+    """Cheap, single-formula check for live frontend input validation —
+    no state or reaction required. Returns 422 with a readable error for
+    an invalid formula instead of a full simulation error."""
+
+    try:
+
+        element_counts = parse_formula(
+            request.formula,
+            elements=ELEMENTS,
+        )
+
+        mass = molar_mass(
+            request.formula,
+            elements=ELEMENTS,
+        )
+
+        return {
+            "valid": True,
+            "formula": request.formula.strip(),
+            "element_counts": element_counts,
+            "molar_mass_g_mol": mass,
+        }
+
+    except ValueError as error:
+
+        return JSONResponse(
+            status_code=422,
+            content={
+                "valid": False,
+                "formula": request.formula,
+                "error": str(error),
+            },
+        )
+
+
 @app.get("/")
 def root():
 
@@ -103,6 +178,7 @@ def root():
         ),
         "documentation": "/docs",
         "simulation_endpoint": "/simulate",
+        "formula_validation_endpoint": "/formulas/validate",
     }
 
 
@@ -157,6 +233,6 @@ if __name__ == "__main__":
     uvicorn.run(
         "app:app",
         host="0.0.0.0",
-        port=8000,
+        port=int(os.environ.get("PORT", 8000)),
         reload=False,
     )

@@ -26,6 +26,7 @@ from chemistry import (
     delta_gibbs,
     equilibrium_constant_from_delta_g,
     balance_reaction,
+    stoichiometric_extent_limiting_reagent,
 )
 
 ELEMENTS = load_elements()
@@ -99,7 +100,10 @@ def _normalize_composition(
         )
 
         # Validate formula
-        parse_formula(formula)
+        try:
+            parse_formula(formula, elements=ELEMENTS)
+        except ValueError as exc:
+            raise SimulationError(str(exc)) from exc
 
         result[formula.strip()] = amount
 
@@ -222,23 +226,23 @@ def calculate_state_properties(
 
     # Ideal-gas calculations are provided as reference calculations.
     result["ideal_gas_volume_l"] = ideal_gas_volume(
-        total_moles,
-        state.temperature_k,
-        state.pressure_atm,
+        moles=total_moles,
+        temperature_k=state.temperature_k,
+        pressure_atm=state.pressure_atm,
     )
 
     if state.volume_l is not None:
 
         result["ideal_gas_pressure_atm"] = ideal_gas_pressure(
-            total_moles,
-            state.temperature_k,
-            state.volume_l,
+            moles=total_moles,
+            temperature_k=state.temperature_k,
+            volume_l=state.volume_l,
         )
 
         result["ideal_gas_moles"] = ideal_gas_moles(
-            state.pressure_atm,
-            state.volume_l,
-            state.temperature_k,
+            temperature_k=state.temperature_k,
+            pressure_atm=state.pressure_atm,
+            volume_l=state.volume_l,
         )
 
     return result
@@ -249,17 +253,54 @@ def calculate_reaction(
     reaction: ReactionSpec,
 ) -> dict[str, Any]:
 
-    balanced = balance_reaction(
-        reaction.reactants,
-        reaction.products,
-        elements=ELEMENTS,
-    )
+    try:
+        balanced = balance_reaction(
+            reaction.reactants,
+            reaction.products,
+            elements=ELEMENTS,
+        )
+    except ValueError as exc:
+        raise SimulationError(str(exc)) from exc
 
     result = {
         "balanced_reactants": balanced["reactants"],
         "balanced_products": balanced["products"],
         "balanced_equation": balanced["equation"],
     }
+
+    # If the state's composition includes every balanced reactant species,
+    # work out the limiting reagent and the resulting product yield. This
+    # is skipped (not guessed) when the state doesn't specify moles for
+    # every reactant.
+    reactant_coeffs = balanced["reactants"]
+    available_moles = {
+        formula: state.composition.get(formula)
+        for formula in reactant_coeffs
+    }
+
+    if all(amount is not None for amount in available_moles.values()):
+
+        try:
+            limiting_species, extent_mol = stoichiometric_extent_limiting_reagent(
+                available_moles,
+                reactant_coeffs,
+            )
+        except ValueError as exc:
+            raise SimulationError(str(exc)) from exc
+
+        result["limiting_reagent"] = limiting_species
+        result["reaction_extent_mol"] = extent_mol
+        result["reactant_moles_consumed"] = {
+            formula: coeff * extent_mol
+            for formula, coeff in reactant_coeffs.items()
+        }
+        result["product_moles_formed"] = {
+            formula: coeff * extent_mol
+            for formula, coeff in balanced["products"].items()
+        }
+    else:
+        result["limiting_reagent"] = None
+        result["reaction_extent_mol"] = None
 
     if (
         reaction.activation_energy_j_mol is not None
