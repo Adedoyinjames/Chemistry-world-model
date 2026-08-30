@@ -18,6 +18,7 @@
 
 | | |
 |---|---|
+| 🌐 Web App | [chemistry-world-model-frontend.vercel.app](https://chemistry-world-model-frontend.vercel.app/) |
 | 🚀 Live API | [chemistry-world-model.onrender.com](https://chemistry-world-model.onrender.com) |
 | 📖 Interactive Docs | [chemistry-world-model.onrender.com/docs](https://chemistry-world-model.onrender.com/docs) |
 | 💓 Health Check | [chemistry-world-model.onrender.com/health](https://chemistry-world-model.onrender.com/health) |
